@@ -1,0 +1,219 @@
+ /* ========================================================== 
+             NavBar
+ ========================================================== */
+ /* =========================================================
+   APP NAVBAR — PREMIUM
+========================================================= */
+
+.app-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+[data-theme="dark"] .app-navbar {
+  background: rgba(17, 22, 42, 0.75);
+}
+
+[data-theme="contrast"] .app-navbar {
+  background: var(--bg);
+}
+
+/* Brand */
+.app-navbar .logo {
+  font-size: 2.1rem;
+  font-weight: 900;
+  letter-spacing: -0.5px;
+  color: var(--accent) !important;
+}
+
+/* Nav links */
+.app-navbar .navbar-nav {
+  gap: 2.2rem;
+}
+
+.app-navbar .nav-link {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--muted) !important;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.2s ease;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link.active {
+  color: var(--text) !important;
+}
+
+/* Active indicator */
+.app-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(
+    90deg,
+    var(--accent),
+    var(--accent-soft)
+  );
+  border-radius: 999px;
+  transition: width 0.25s ease;
+}
+
+.app-navbar .nav-link:hover::after,
+.app-navbar .nav-link.active::after {
+  width: 100%;
+}
+
+/* Mobile toggle */
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  filter: invert(0.6);
+}
+
+[data-theme="dark"] .navbar-toggler-icon {
+  filter: invert(1);
+}
+
+
+/* =========================================================
+   HERO — STRONG & CONFIDENT
+========================================================= */
+
+.about-hero {
+  padding-top: 5.5rem;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-hero h1 {
+  font-size: 3.2rem;
+}
+
+.about-hero img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.25);
+  transition: transform 0.35s ease;
+}
+
+.about-hero img:hover {
+  transform: translateY(-10px);
+}
+
+/* =========================================================
+   MISSION — CALM, TRUST-BUILDING
+========================================================= */
+
+.about-mission {
+  background: linear-gradient(
+    135deg,
+    rgba(79, 70, 229, 0.08),
+    transparent
+  );
+}
+
+/* =========================================================
+   FEATURES — REAL PRODUCT FEEL
+========================================================= */
+
+.about-features .feature-card {
+  background: linear-gradient(
+    180deg,
+    var(--surface),
+    rgba(79, 70, 229, 0.04)
+  );
+}
+
+
+/* =========================================================
+   AUDIENCE — SIMPLE & READABLE
+========================================================= */
+
+.about-audience ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  max-width: 700px;
+}
+
+.about-audience li {
+  font-size: 1.1rem;
+  padding: 0.7rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.about-audience li::before {
+  content: "✔";
+  color: var(--accent);
+  font-weight: 900;
+}
+
+/* =========================================================
+   CTA — STRONG BUT NOT LOUD
+========================================================= */
+
+.about-cta {
+  background: linear-gradient(
+    135deg,
+    var(--accent),
+    var(--accent-soft)
+  );
+}
+
+/* =========================================================
+   DARK MODE POLISH
+========================================================= */
+
+[data-theme="dark"] .about-hero img {
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================================================
+   HIGH CONTRAST — ACCESSIBILITY FIRST
+========================================================= */
+
+[data-theme="contrast"] .about-mission,
+[data-theme="contrast"] .feature-card,
+[data-theme="contrast"] .about-cta {
+  background: none;
+  border: 2px solid var(--border);
+}
+
+[data-theme="contrast"] * {
+  box-shadow: none !important;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 992px) {
+  .about-hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-hero p {
+    margin: auto;
+  }
+}
+
+@media (max-width: 576px) {
+  .about-hero h1 {
+    font-size: 2.3rem;
+  }
+}
