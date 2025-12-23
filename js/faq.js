@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
       author: "Support Team",
       date: "March 12, 2025"
     },
-    {
-      question: "Is this FAQ page mobile friendly?",
-      answer: "Yes, the page is built using Bootstrap 5 and adapts to all screen sizes.",
-      author: "Web Team",
-      date: "March 15, 2025"
-    },
+    // {
+    //   question: "Is this FAQ page mobile friendly?",
+    //   answer: "Yes, the page is built using Bootstrap 5 and adapts to all screen sizes.",
+    //   author: "Web Team",
+    //   date: "March 15, 2025"
+    // },
     {
       question: "Can I submit my own question?",
       answer: "Yes, you can submit questions using the form below.",
@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
           answerText.textContent = data.RelatedTopics[0].Text;
         } else {
           answerText.textContent =
-            "No instant answer found. Our team will review your question.";
+            "Your question was sent successfylly by E-mail. Our team will review your question.";
         }
       } catch (error) {
         answerText.textContent =
